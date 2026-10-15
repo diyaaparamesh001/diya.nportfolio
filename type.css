@@ -1,6 +1,7 @@
 /* Type system shared by every page.
    Two families: DM Serif Display for display and section headings, Inter
-   for everything you read. One scale, so every size has a job. */
+   for everything you read. One scale, so every size has a job.
+   Order at every width: display > h1 > h2 > h3 > lead > body > small > label. */
 :root {
   --display: "DM Serif Display", "Iowan Old Style", Georgia, serif;
   --text: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -8,8 +9,8 @@
   --fs-label: 13px;                              /* eyebrows, tags, captions */
   --fs-small: clamp(15px, 0.3vw + 12px, 16px);  /* meta, secondary copy */
   --fs-body: clamp(16px, 0.6vw + 10px, 19px);   /* paragraphs */
-  --fs-lead: clamp(19px, 1.5vw + 6px, 30px);    /* intros, standfirsts */
-  --fs-h3: clamp(20px, 1.2vw + 8px, 28px);      /* card and item titles */
+  --fs-lead: clamp(18px, 0.6vw + 15.4px, 24px); /* intros, standfirsts */
+  --fs-h3: clamp(20px, 1vw + 15.6px, 30px);     /* card and item titles */
   --fs-h2: clamp(32px, 3vw + 8px, 54px);        /* section headings */
   --fs-h1: clamp(40px, 4.2vw + 8px, 72px);      /* page titles */
   --fs-display: clamp(96px, 12vw, 176px);       /* the name on the home page */

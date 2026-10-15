@@ -832,3 +832,36 @@ footer { margin-top: 104px; }
 
   .thinker { padding: 24px 20px; }
 }
+
+/* ---------------------------------------------------------------
+   The home page is set entirely in Inter. Headings take the same
+   scale steps as elsewhere, with weight and tight tracking giving
+   them presence instead of a display serif.
+   --------------------------------------------------------------- */
+:root {
+  --display: var(--text);
+  --serif: var(--text);
+}
+
+.hero-name {
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.045em;
+}
+
+.works-title,
+.philosophy-title,
+.cta h2 {
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+.works-title { line-height: 1.1; }
+
+.philosophy-title { line-height: 1.2; }
+
+.works-title em,
+.serif {
+  font-style: italic;
+  font-weight: 600;
+}
