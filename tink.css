@@ -983,7 +983,7 @@
   letter-spacing: var(--tracking-label);
 }
 
-.t-pills li { font-size: 12px; letter-spacing: 0.08em; }
+.t-pills li { font-size: var(--fs-tag); letter-spacing: 0.08em; }
 
 .t-tagline,
 .t-lead { font-size: var(--fs-lead); line-height: 1.45; }

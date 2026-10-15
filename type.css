@@ -1,12 +1,13 @@
 /* Type system shared by every page.
    Two families: DM Serif Display for display and section headings, Inter
    for everything you read. One scale, so every size has a job.
-   Order at every width: display > h1 > h2 > h3 > lead > body > small > label. */
+   Order at every width: display > h1 > h2 > h3 > lead > body > small > label > tag. */
 :root {
   --display: "DM Serif Display", "Iowan Old Style", Georgia, serif;
   --text: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
 
-  --fs-label: 13px;                              /* eyebrows, tags, captions */
+  --fs-tag: 12px;                                /* pills, card tags, badges, fine print */
+  --fs-label: 13px;                              /* eyebrows, captions */
   --fs-small: clamp(15px, 0.3vw + 12px, 16px);  /* meta, secondary copy */
   --fs-body: clamp(16px, 0.6vw + 10px, 19px);   /* paragraphs */
   --fs-lead: clamp(18px, 0.6vw + 15.4px, 24px); /* intros, standfirsts */

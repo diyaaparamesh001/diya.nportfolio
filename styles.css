@@ -608,7 +608,7 @@ footer { margin-top: 104px; }
 
   .work-card-offset { margin-top: 0; }
 
-  .bottom-bar { padding: 20px 0; font-size: 12px; }
+  .bottom-bar { padding: 20px 0; font-size: var(--fs-tag); }
 }
 
 @media (max-width: 480px) {
@@ -701,7 +701,7 @@ footer { margin-top: 104px; }
 
 .work-tags,
 .pill {
-  font-size: 12px;
+  font-size: var(--fs-tag);
   font-weight: 600;
   letter-spacing: 0.08em;
 }
@@ -769,7 +769,7 @@ footer { margin-top: 104px; }
 .badge {
   height: auto;
   padding: 10px 16px;
-  font-size: 12px;
+  font-size: var(--fs-tag);
   letter-spacing: 0.08em;
 }
 

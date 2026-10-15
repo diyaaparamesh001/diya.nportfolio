@@ -1510,7 +1510,7 @@ svg {
     align-items: flex-start;
     gap: 8px;
     padding: 20px 0;
-    font-size: 12px;
+    font-size: var(--fs-tag);
   }
 
   .cs-bottom .location { gap: 8px; }
@@ -1543,7 +1543,7 @@ svg {
 
 .story-num,
 .num,
-.avatar { font-size: 12px; font-weight: 500; }
+.avatar { font-size: var(--fs-tag); font-weight: 500; }
 
 /* Display and section headings */
 .cs-title,
