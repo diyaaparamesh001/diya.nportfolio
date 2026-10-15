@@ -1120,3 +1120,19 @@
    edge on the white page. The caption below is centred on the grid. */
 .t-wires img { border: 1px solid #e4e3df; }
 .t-small-note { max-width: none; }
+
+/* 12 Conclusion: same column as Looking Back, closing on one blue line. */
+.t-conclusion {
+  width: calc(925 * var(--u));
+  margin-left: auto;
+  margin-right: auto;
+  border-top: 1px solid var(--blue-line);
+}
+
+.t-conclusion .t-body { margin-top: 32px; }
+.t-conclusion .t-body p + p { margin-top: 16px; }
+.t-conclusion .t-lead { margin-top: 32px; }
+
+@media (max-width: 900px) {
+  .t-conclusion { width: auto; margin-left: 24px; margin-right: 24px; }
+}
