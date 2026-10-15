@@ -887,3 +887,18 @@ footer { margin-top: 104px; }
   letter-spacing: 0.04em;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
 }
+
+/* Tag line above each work image: solid dot, bullet separators. */
+.work-tags {
+  gap: 10px;
+  font-size: var(--fs-label);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
+
+.bullet {
+  flex: none;
+  width: 7px;
+  height: 7px;
+  background: #17191c;
+}
