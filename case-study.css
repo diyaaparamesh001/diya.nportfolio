@@ -1914,3 +1914,25 @@ svg {
 .mc .intervention.conclusion p:not(.tag) { line-height: 1.4; }
 .mc .gaps p { line-height: 1.6; }
 .mc .prototype-frame figcaption { line-height: 1.6; }
+
+/* Impact cards: titles share one row and explanations another, so every
+   explanation starts on the same line whatever the title's length. */
+.mc .impact-grid {
+  grid-template-rows: auto 1fr;
+  min-height: 0;
+}
+
+.mc .impact-grid article {
+  display: grid;
+  grid-row: span 2;
+  grid-template-rows: subgrid;
+  row-gap: 20px;
+  align-content: start;
+}
+
+.mc .impact-grid p { margin: 0; }
+
+@media (max-width: 900px) {
+  .mc .impact-grid { grid-template-rows: none; }
+  .mc .impact-grid article { grid-row: auto; grid-template-rows: auto; }
+}
