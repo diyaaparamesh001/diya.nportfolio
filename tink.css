@@ -1068,3 +1068,6 @@
 
 .t-screen figcaption span,
 .t-screens-2 figcaption span { font-family: var(--text); font-weight: 600; }
+
+/* Hero tagline in the same black as the text below it. */
+.tink .t-tagline { color: var(--text); }
