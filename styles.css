@@ -790,37 +790,37 @@ footer { margin-top: 104px; }
 
 .social { margin-top: 32px; }
 
-/* Hero intro: three clear steps down the scale. The italic statement
-   leads (lead), the sentence explains it (body), the sign-off closes
-   quietly (small). */
+/* Hero intro: three lines at one size (lead), running up to the 1000px
+   measure. The statement is a quieter grey; the rest is near-black. */
 .hero-intro {
   max-width: var(--measure);
   margin-top: 28px;
 }
 
-.hero-statement {
+.hero-statement,
+.hero-intro .hero-text,
+.hero-note {
+  max-width: none;
   font-size: var(--fs-lead);
-  font-style: italic;
+  font-style: normal;
+  line-height: 1.45;
+  letter-spacing: -0.005em;
+}
+
+.hero-statement {
   font-weight: 500;
-  line-height: 1.3;
-  letter-spacing: -0.01em;
-  color: #17191c;
+  color: #8a8a8a;
 }
 
 .hero-intro .hero-text {
-  max-width: var(--measure);
-  margin-top: 12px;
-  font-size: var(--fs-body);
+  margin-top: 2px;
   font-weight: 500;
-  line-height: 1.6;
-  color: #555;
+  color: #17191c;
 }
 
 .hero-note {
-  margin-top: 18px;
-  font-size: var(--fs-small);
+  margin-top: 20px;
   font-weight: 500;
-  line-height: 1.5;
   color: #17191c;
 }
 
