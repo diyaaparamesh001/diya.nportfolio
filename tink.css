@@ -1106,3 +1106,12 @@
   .t-who-grid { grid-template-rows: none; grid-auto-rows: 1fr; }
   .t-card { grid-row: auto; grid-template-rows: auto auto 1fr; }
 }
+
+/* What needed solving: the principle rows and their dividers run the full
+   width of the box, and the note below is centred on the box. */
+.t-principles li { max-width: none; }
+
+.t-mono-note {
+  max-width: none;
+  text-align: center;
+}
