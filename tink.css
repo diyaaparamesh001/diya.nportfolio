@@ -1319,5 +1319,8 @@
   .tink .t-footer .next-nav { width: auto; margin: 0 24px; }
 }
 
-/* Hero pills sit close under the blue line they follow. */
-.tink .t-pills { margin-top: 20px; }
+/* Hero: the pills sit just above the blue divider that closes the hero,
+   closer to it than to the text above. */
+@media (min-width: 901px) {
+  .tink .t-hero { padding-bottom: 24px; align-items: end; }
+}
