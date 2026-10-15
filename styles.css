@@ -791,8 +791,7 @@ footer { margin-top: 104px; }
 .social { margin-top: 32px; }
 
 /* Hero intro: three lines at one size (lead), running up to the 1000px
-   measure, evenly spaced. The statement is a quieter grey; the rest is
-   near-black. */
+   measure, evenly spaced, in #17191C; the sign-off is softened to 76%. */
 .hero-intro {
   max-width: var(--measure);
   margin-top: 28px;
@@ -810,7 +809,7 @@ footer { margin-top: 104px; }
 
 .hero-statement {
   font-weight: 500;
-  color: #8a8a8a;
+  color: #17191c;
 }
 
 .hero-intro .hero-text {
@@ -822,7 +821,7 @@ footer { margin-top: 104px; }
 .hero-note {
   margin-top: 2px;
   font-weight: 500;
-  color: #17191c;
+  color: rgba(23, 25, 28, 0.76); /* #17191C at 76% */
 }
 
 @media (max-width: 720px) {
