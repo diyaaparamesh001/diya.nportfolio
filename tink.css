@@ -1085,3 +1085,24 @@
   background: var(--blue);
   vertical-align: baseline;
 }
+
+/* Who is this for: three identical cards. Same top, same height, and the
+   title, description and footer each share a row so their lines match. */
+.t-who-grid {
+  grid-template-rows: auto 1fr auto;
+  align-items: stretch;
+}
+
+.t-card {
+  display: grid;
+  grid-row: span 3;
+  grid-template-rows: subgrid;
+  row-gap: 0;
+}
+
+.t-card .t-card-foot { align-self: end; }
+
+@media (max-width: 900px) {
+  .t-who-grid { grid-template-rows: none; grid-auto-rows: 1fr; }
+  .t-card { grid-row: auto; grid-template-rows: auto auto 1fr; }
+}
