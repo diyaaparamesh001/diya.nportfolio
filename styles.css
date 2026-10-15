@@ -791,7 +791,8 @@ footer { margin-top: 104px; }
 .social { margin-top: 32px; }
 
 /* Hero intro: three lines at one size (lead), running up to the 1000px
-   measure. The statement is a quieter grey; the rest is near-black. */
+   measure, evenly spaced. The statement is a quieter grey; the rest is
+   near-black. */
 .hero-intro {
   max-width: var(--measure);
   margin-top: 28px;
@@ -819,7 +820,7 @@ footer { margin-top: 104px; }
 }
 
 .hero-note {
-  margin-top: 20px;
+  margin-top: 2px;
   font-weight: 500;
   color: #17191c;
 }
