@@ -790,8 +790,9 @@ footer { margin-top: 104px; }
 
 .social { margin-top: 32px; }
 
-/* Hero intro: a statement and its supporting line share the lead size
-   (weight and colour separate them), then a quieter body-size sign-off. */
+/* Hero intro: three clear steps down the scale. The italic statement
+   leads (lead), the sentence explains it (body), the sign-off closes
+   quietly (small). */
 .hero-intro {
   max-width: 36em;
   margin-top: 28px;
@@ -807,16 +808,17 @@ footer { margin-top: 104px; }
 }
 
 .hero-intro .hero-text {
-  margin-top: 6px;
-  font-size: var(--fs-lead);
+  max-width: 30em;
+  margin-top: 12px;
+  font-size: var(--fs-body);
   font-weight: 500;
-  line-height: 1.45;
+  line-height: 1.6;
   color: #555;
 }
 
 .hero-note {
-  margin-top: 20px;
-  font-size: var(--fs-body);
+  margin-top: 18px;
+  font-size: var(--fs-small);
   font-weight: 500;
   line-height: 1.5;
   color: #17191c;
