@@ -1673,3 +1673,65 @@ svg {
    the bright tone, the sentence before it stays in the default text. */
 .cs-intro { color: var(--c-text); }
 .cs-intro b { color: var(--c-bright); }
+
+/* System efficiency: the five gains read as a numbered sequence on the
+   page background, each with a title and one line of explanation. */
+.efficiency-panel { padding-bottom: 0; background: none; }
+
+.efficiency .light-title { letter-spacing: -0.01em; }
+
+.flow {
+  max-width: var(--measure);
+  margin: 56px 0 0;
+  padding: 0;
+  list-style: none;
+  border-bottom: 1px solid rgba(200, 194, 194, 0.18);
+}
+
+.flow-step {
+  display: grid;
+  grid-template-columns: 56px minmax(0, 300px) minmax(0, 1fr);
+  column-gap: 32px;
+  align-items: baseline;
+  min-height: 0;
+  padding: 28px 0;
+  border: 0;
+  border-top: 1px solid rgba(200, 194, 194, 0.18);
+  background: none;
+  letter-spacing: 0;
+}
+
+.flow-num {
+  color: var(--c-red);
+  font-size: var(--fs-label);
+  font-weight: 600;
+  letter-spacing: var(--tracking-label);
+  font-variant-numeric: tabular-nums;
+}
+
+.flow-title {
+  margin: 0;
+  color: var(--c-bright);
+  font-family: var(--sans);
+  font-size: var(--fs-lead);
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.flow-desc {
+  margin: 0;
+  color: var(--c-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+}
+
+@media (max-width: 720px) {
+  .flow { margin-top: 40px; }
+  .flow-step {
+    grid-template-columns: 40px minmax(0, 1fr);
+    column-gap: 16px;
+    row-gap: 8px;
+    padding: 24px 0;
+  }
+  .flow-desc { grid-column: 2; }
+}
