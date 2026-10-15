@@ -1071,3 +1071,17 @@
 
 /* Hero tagline in the same black as the text below it. */
 .tink .t-tagline { color: var(--text); }
+
+/* The tink wordmark: black Poppins Bold with the i drawn as a blue arch
+   (round top, flat base) that rises a little above the x-height. */
+.tink .t-name { color: var(--c-wordmark, #17191c); letter-spacing: -0.01em; }
+
+.t-name-i {
+  display: inline-block;
+  width: 0.3em;
+  height: 0.62em;
+  margin: 0 0.115em 0 0.105em;
+  border-radius: 0.15em 0.15em 0 0;
+  background: var(--blue);
+  vertical-align: baseline;
+}
