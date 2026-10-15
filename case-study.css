@@ -1658,3 +1658,6 @@ svg {
 .proto-open { font-size: var(--fs-label); letter-spacing: 0.02em; }
 
 .cs-facts dt { font-size: var(--fs-label); letter-spacing: var(--tracking-label); }
+
+/* Opening paragraph of A Missed Connection reads in the bright tone. */
+.cs-intro { color: var(--bright); }
