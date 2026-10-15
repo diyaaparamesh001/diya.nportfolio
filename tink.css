@@ -1136,3 +1136,185 @@
 @media (max-width: 900px) {
   .t-conclusion { width: auto; margin-left: 24px; margin-right: 24px; }
 }
+
+/* ---------------------------------------------------------------
+   tink: one calm set of rules.
+   Fonts: Poppins for the wordmark and headings, Inter for everything
+   else. Colours: ink #111, body #222, muted #757575, blue, coral, white.
+   Weights: 400 to read, 600 for titles, labels and emphasis, 700 only
+   in the wordmark. Line height: 1.15 headings, 1.35 titles and
+   statements, 1.6 reading text. Letter spacing: none for text, 0.12em
+   for uppercase labels, -0.02em for Poppins headings. Lines: one light
+   blue hairline; blue or coral 2px rules for emphasis.
+   --------------------------------------------------------------- */
+.tink {
+  --display: var(--poppins);
+  --mono: var(--sans);
+  --t-ink: #111;
+  --t-body: #222;
+  --t-muted: #757575;
+  --t-coral: #ff6647;
+  --t-surface: #f8f8f6;
+  --t-tint: #dce8fb;
+}
+
+/* Headings and the opening quote: Poppins SemiBold */
+.tink .t-heading,
+.tink .t-quote p {
+  font-family: var(--poppins);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.tink .t-heading .t-case { font: inherit; letter-spacing: inherit; }
+.tink .t-quote b { font-weight: 600; font-style: italic; }
+
+/* Wordmark */
+.tink .t-name { color: var(--t-ink); }
+
+/* Labels: Inter SemiBold, uppercase, 0.12em */
+.tink .t-kicker,
+.tink .t-num,
+.tink .t-principle-name > span,
+.tink .t-card-foot,
+.tink .t-pills li,
+.tink .t-small-note,
+.tink .t-subhead,
+.tink .t-step-head span,
+.tink .t-guide-head,
+.tink .t-back-card h3 {
+  font-family: var(--sans);
+  font-size: var(--fs-label);
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+}
+
+.tink .t-pills li { font-size: var(--fs-tag); }
+.tink .t-card-foot,
+.tink .t-subhead { color: var(--t-ink); }
+.tink .t-step-head span { color: var(--t-ink); background: var(--t-tint); }
+
+/* Titles: Inter SemiBold, no tracking */
+.tink .t-card h3,
+.tink .t-label,
+.tink .t-principle-name h3,
+.tink .t-step-head,
+.tink .t-faq-box h3 {
+  font-family: var(--sans);
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: 0;
+}
+
+/* Statements and reading text */
+.tink .t-tagline,
+.tink .t-lead { line-height: 1.35; letter-spacing: 0; }
+
+.tink .t-body,
+.tink .t-body p,
+.tink .t-card p,
+.tink .t-principles p,
+.tink .t-step-card p,
+.tink .t-instead p,
+.tink .t-faq-box p,
+.tink .t-back-card p,
+.tink .t-guide-text,
+.tink .t-screen figcaption,
+.tink .t-wires figcaption {
+  line-height: 1.6;
+  letter-spacing: 0;
+}
+
+.tink .t-mono-note { font-family: var(--sans); letter-spacing: 0; line-height: 1.6; }
+.tink .t-step-card,
+.tink .t-instead { letter-spacing: 0; }
+
+/* Emphasis: SemiBold. Italic only in the opening quote. */
+.tink b,
+.tink strong,
+.tink i,
+.tink em { font-weight: 600; }
+.tink .t-body i { font-style: normal; }
+
+/* Colours: one ink, one body, one muted */
+.tink .t-subhead,
+.tink .cs-header,
+.tink .cs-header strong,
+.tink .cs-header .back { color: var(--t-ink); }
+
+.tink .cs-header strong,
+.tink .cs-header .back { font-weight: 600; }
+
+/* Lines: one light blue hairline everywhere */
+.tink .t-who,
+.tink .t-interface,
+.tink .t-ui-group,
+.tink .t-ui-group:first-of-type,
+.tink .t-footer { border-color: var(--blue-line); }
+
+.tink .t-ui-group,
+.tink .t-ui-group:first-of-type { background: var(--t-surface); }
+
+.tink .t-card,
+.tink .t-principles,
+.tink .t-guide { background: var(--t-surface); }
+
+.tink .t-screen figcaption span,
+.tink .t-wires img { border-color: var(--blue-line); }
+
+/* Coral emphasis: a 2px rule, like the blue one */
+.tink .t-instead { border-color: var(--t-coral); }
+.tink .t-open { border-color: var(--t-coral); border-left-width: 2px; }
+.tink .t-open h3 { color: var(--t-coral); }
+
+/* Footer and next link on the type scale */
+.tink .next-nav,
+.tink .next-label,
+.tink .all-work,
+.tink .cs-footer span {
+  font-size: var(--fs-tag);
+  font-weight: 600;
+  letter-spacing: var(--tracking-label);
+  color: var(--t-muted);
+}
+
+.tink .prev strong { font-size: var(--fs-lead); font-weight: 600; letter-spacing: 0; color: var(--t-ink); text-transform: none; }
+.tink .prev span:not(.next-label) { font-size: var(--fs-small); font-weight: 400; letter-spacing: 0; text-transform: none; color: var(--t-muted); }
+.tink .cs-header span { color: var(--t-ink); }
+
+/* One left edge: every section from the prototype onwards sits in the
+   same 1000-unit column as the sections above it. */
+.tink .t-col,
+.tink .t-faq,
+.tink .t-back,
+.tink .t-conclusion {
+  width: calc(1000 * var(--u));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tink .t-flow .t-col { width: auto; margin: 0; }
+.tink .t-faq-box { max-width: calc(660 * var(--u)); }
+
+@media (max-width: 900px) {
+  .tink .t-col,
+  .tink .t-faq,
+  .tink .t-back,
+  .tink .t-conclusion { width: auto; margin-left: 24px; margin-right: 24px; }
+  .tink .t-flow .t-col { margin: 0; }
+  .tink .t-faq-box { max-width: none; }
+}
+
+.tink .t-footer .next-nav {
+  width: calc(1000 * var(--u));
+  margin: 0 auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@media (max-width: 900px) {
+  .tink .t-footer .next-nav { width: auto; margin: 0 24px; }
+}
