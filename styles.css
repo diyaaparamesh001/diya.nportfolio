@@ -799,15 +799,17 @@ footer { margin-top: 104px; }
 
 .hero-statement {
   font-size: var(--fs-lead);
-  font-weight: 600;
+  font-style: italic;
+  font-weight: 500;
   line-height: 1.3;
   letter-spacing: -0.01em;
-  color: var(--ink);
+  color: #17191c;
 }
 
 .hero-intro .hero-text {
   margin-top: 6px;
   font-size: var(--fs-lead);
+  font-weight: 500;
   line-height: 1.45;
   color: #555;
 }
@@ -817,7 +819,7 @@ footer { margin-top: 104px; }
   font-size: var(--fs-body);
   font-weight: 500;
   line-height: 1.5;
-  color: var(--maroon);
+  color: #17191c;
 }
 
 @media (max-width: 720px) {
