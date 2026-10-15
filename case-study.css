@@ -1735,3 +1735,182 @@ svg {
   }
   .flow-desc { grid-column: 2; }
 }
+
+/* ---------------------------------------------------------------
+   A Missed Connection: one calm set of rules.
+   Weights: 400 to read, 500 for titles, 600 for labels and inline
+   emphasis. Letter spacing: none for text, wide for labels, slightly
+   tight for serif headings. Line height: 1.1 headings, 1.4 titles and
+   statements, 1.6 reading text. Lines: one faint hairline for every
+   box and divider, one 2px red rule for callouts. Italic for quotes
+   only. Scoped to body.mc so tink and About are untouched.
+   --------------------------------------------------------------- */
+.mc {
+  --line: rgba(200, 194, 194, 0.2);
+  --border: rgba(200, 194, 194, 0.2);
+}
+
+/* Labels: one style everywhere, red, no boxes or underlines */
+.mc .tag,
+.mc .tag-bold,
+.mc .cs-eyebrow,
+.mc .eyebrow-line,
+.mc .voices-title,
+.mc .cs-facts dt,
+.mc .cs-figure figcaption strong,
+.mc .testing-stat .label,
+.mc .ideation figcaption {
+  display: block;
+  height: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  color: var(--c-red);
+  font-family: var(--sans);
+  font-size: var(--fs-label);
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+}
+
+.mc .cs-eyebrow strong { color: inherit; font-weight: 600; }
+.mc .cs-figure figcaption strong { color: var(--c-text); margin-bottom: 4px; }
+.mc .testing-stat .label { color: var(--c-muted); }
+.mc .ideation figcaption { color: var(--c-muted); font-weight: 500; }
+
+/* Serif headings */
+.mc .cs-title,
+.mc .story-title,
+.mc .premise-title,
+.mc .light-title,
+.mc .intervention h2,
+.mc .testing-title { line-height: 1.1; letter-spacing: -0.01em; }
+
+.mc .stat,
+.mc .testing-stat .big { line-height: 1.1; letter-spacing: -0.01em; }
+
+/* Titles: Inter Medium */
+.mc .premise-right h3,
+.mc .found-card h3,
+.mc .stat-label,
+.mc .gaps h3,
+.mc .direction h3,
+.mc .beyond h3,
+.mc .impact-grid h3,
+.mc .flow-title {
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+
+/* Statements at the lead size */
+.mc .cs-lead,
+.mc .callout p,
+.mc .voice blockquote,
+.mc .insight p,
+.mc .intervention p:not(.tag),
+.mc .boxed {
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+
+/* Reading text */
+.mc .found-card p,
+.mc .impact-grid p,
+.mc .story-body p,
+.mc .note,
+.mc .direction > p,
+.mc .testing-detail,
+.mc .testing-detail p,
+.mc .cs-figure figcaption,
+.mc .compare figcaption,
+.mc .pills li,
+.mc .proto-open {
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0;
+}
+
+/* Emphasis: SemiBold, upright */
+.mc b,
+.mc strong,
+.mc em,
+.mc i { font-style: normal; font-weight: 600; }
+
+.mc .conclusion i:not(b i) { font-weight: inherit; }
+
+/* Quotes stay italic, at the reading weight */
+.mc .testing-detail .quote { font-style: italic; font-weight: 500; }
+
+/* Numbers: plain red labels, like the efficiency steps */
+.mc .story-num,
+.mc .num {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  border: 0;
+  border-radius: 0;
+  color: var(--c-red);
+  font-size: var(--fs-label);
+  font-weight: 600;
+  letter-spacing: var(--tracking-label);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Lines: hairline boxes, a 2px red rule for callouts */
+.mc .callout,
+.mc .insight,
+.mc .beyond,
+.mc .testing-detail blockquote { border-left: 2px solid var(--c-red); }
+
+.mc .prototype-frame { border-color: rgba(17, 17, 17, 0.15); }
+
+.mc .cs-footer,
+.mc .next-nav { border-color: var(--line); }
+
+/* Footer and next link on the scale */
+.mc .skip { font-size: var(--fs-small); letter-spacing: 0; }
+
+.mc .next-nav,
+.mc .all-work,
+.mc .next-label,
+.mc .cs-footer span {
+  font-size: var(--fs-tag);
+  font-weight: 500;
+  letter-spacing: var(--tracking-label);
+}
+
+.mc .next strong { font-size: var(--fs-lead); font-weight: 500; letter-spacing: 0; text-transform: none; }
+.mc .next span:not(.next-label) { font-size: var(--fs-small); letter-spacing: 0; text-transform: none; }
+
+.mc .cs-header strong,
+.mc .cs-header .back { font-weight: 600; }
+
+/* System efficiency: number, then title with its explanation below,
+   so every row starts on the same line. */
+.mc .flow-step {
+  grid-template-columns: 56px minmax(0, 1fr);
+  row-gap: 6px;
+  align-items: start;
+}
+
+.mc .flow-num { line-height: calc(var(--fs-lead) * 1.4); }
+
+.mc .flow-title { grid-column: 2; }
+.mc .flow-desc { grid-column: 2; }
+
+@media (max-width: 720px) {
+  .mc .flow-step { grid-template-columns: 40px minmax(0, 1fr); }
+}
+
+.mc .voice figcaption strong { font-weight: 600; }
+.mc .pills li { border-color: var(--line); }
+.mc .flow,
+.mc .flow-step { border-color: var(--line); }
+.mc .voice figcaption { line-height: 1.6; }
+.mc .conclusion p { line-height: 1.4; }
+.mc .intervention.conclusion p:not(.tag) { line-height: 1.4; }
+.mc .gaps p { line-height: 1.6; }
+.mc .prototype-frame figcaption { line-height: 1.6; }
