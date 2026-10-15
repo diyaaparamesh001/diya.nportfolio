@@ -1324,3 +1324,9 @@
 @media (min-width: 901px) {
   .tink .t-hero { padding-bottom: 64px; align-items: end; }
 }
+
+/* The hero phones image carries extra white space around the phones;
+   show it a little larger so the phones keep their size. */
+@media (min-width: 901px) {
+  .tink .t-hero-img { width: calc(262 * var(--u)); margin-right: calc(24 * var(--u)); }
+}
