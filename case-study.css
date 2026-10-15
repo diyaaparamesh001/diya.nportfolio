@@ -8,10 +8,20 @@
   /* Nav bar and footers keep the design's original scale. */
   --n: calc(min(100vw, 1440px) / 1440);
   --bg: #0f0d0e;
-  --text: #c8c2c2;
-  --bright: #e7e1e1;
-  --soft: #d6d2d2;
-  --red: #cb1820;
+  /* Text colours. A Missed Connection uses these six and nothing else.
+     Brightest to dimmest, then the accent and the dark ink used on the
+     light section. */
+  --c-bright: #e7e1e1;  /* emphasis: the opening paragraph */
+  --c-body: #d6d2d2;    /* body copy, captions, story panels */
+  --c-text: #c8c2c2;    /* default: titles, headings, labels, lead */
+  --c-muted: #8f8989;   /* secondary: nav, footer, roles, side notes */
+  --c-red: #cb1820;     /* accent */
+  --c-dark: #111;       /* text on the light Intervention section */
+  /* Page-level names. tink and About reassign these for their themes. */
+  --text: var(--c-text);
+  --bright: var(--c-bright);
+  --soft: var(--c-body);
+  --red: var(--c-red);
   --line: #bdbdbd;
   --border: #a8a6a7;
   --sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -54,7 +64,7 @@ svg {
 .cs-header-inner {
   display: flex;
   /* Muted, but readable on the dark background (about 5:1 contrast). */
-  color: #8f8989;
+  color: var(--c-muted);
   align-items: center;
   justify-content: space-between;
   height: calc(80 * var(--n));
@@ -479,7 +489,7 @@ svg {
 .found-card .muted {
   margin-top: calc(18 * var(--u));
   line-height: 1.22;
-  color: #b5b0b0;
+  color: var(--c-muted);
 }
 
 /* What users reported */
@@ -533,7 +543,7 @@ svg {
   margin-top: calc(32 * var(--u));
   font-size: max(calc(10 * var(--u)), 11px);
   line-height: 1.2;
-  color: #b5b0b0;
+  color: var(--c-muted);
 }
 
 .voice figcaption strong {
@@ -578,13 +588,13 @@ svg {
 .intervention {
   padding: calc(104 * var(--u)) 0;
   background: #fafaf7;
-  color: #111;
+  color: var(--c-dark);
   text-align: center;
 }
 
 .intervention .tag {
   border-color: #4a4645;
-  color: #111;
+  color: var(--c-dark);
 }
 
 .intervention h2 {
@@ -861,7 +871,7 @@ svg {
 .prototype {
   padding: calc(104 * var(--u)) 0 calc(105 * var(--u));
   background: #fafaf7;
-  color: #111;
+  color: var(--c-dark);
 }
 
 .prototype .light-title { margin-top: 0; }
@@ -880,7 +890,7 @@ svg {
   width: calc(776 * var(--u));
   margin: calc(74 * var(--u)) auto 0;
   padding: calc(45 * var(--u)) calc(38 * var(--u)) calc(38 * var(--u)) calc(40 * var(--u));
-  border: 1px solid #d81921;
+  border: 1px solid var(--c-red);
 }
 
 .prototype-frame figure {
@@ -916,7 +926,7 @@ svg {
   margin-top: auto;
   padding-top: calc(12 * var(--u));
   font-size: max(calc(13 * var(--u)), 12px);
-  color: #d81921;
+  color: var(--c-red);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
@@ -1037,7 +1047,7 @@ svg {
   margin: calc(44 * var(--u)) 0 0;
   padding: calc(4 * var(--u)) calc(14 * var(--u)) calc(2 * var(--u));
   border: 1px solid var(--line);
-  border-left: 2px solid #d81921;
+  border-left: 2px solid var(--c-red);
   font-size: max(calc(14 * var(--u)), 13px);
   line-height: 1.22;
   letter-spacing: 0.02em;
@@ -1067,7 +1077,7 @@ svg {
 .beyond {
   margin-top: calc(66 * var(--u));
   padding: calc(22 * var(--u)) 0 calc(22 * var(--u)) calc(21 * var(--u));
-  border-left: 4px solid #d81921;
+  border-left: 4px solid var(--c-red);
   font-size: max(calc(14 * var(--u)), 13px);
   line-height: 1.22;
 }
@@ -1107,7 +1117,7 @@ svg {
   margin-top: calc(48 * var(--u));
   font-weight: 300;
   letter-spacing: 0.04em;
-  color: #a19c9c;
+  color: var(--c-muted);
 }
 
 /* Conclusion: the light band again, with larger body text */
@@ -1151,7 +1161,7 @@ svg {
   font-size: max(calc(11 * var(--n)), 11px);
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: #ccc6c6;
+  color: var(--c-text);
 }
 
 .all-work::before {
@@ -1175,7 +1185,7 @@ svg {
   align-items: flex-end;
   gap: calc(4 * var(--n));
   font-size: max(calc(13 * var(--n)), 12px);
-  color: #ccc6c6;
+  color: var(--c-text);
 }
 
 .next-label {
@@ -1211,7 +1221,7 @@ svg {
   font-size: max(calc(14 * var(--n)), 12px);
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  color: #6b6666;
+  color: var(--c-muted);
 }
 
 .cs-bottom .location {
@@ -1530,7 +1540,7 @@ svg {
 .cs-eyebrow,
 .eyebrow-line,
 .voices-title {
-  font-family: var(--text);
+  font-family: var(--sans);
   font-size: var(--fs-label);
   font-weight: 600;
   letter-spacing: var(--tracking-label);
@@ -1588,7 +1598,7 @@ svg {
 .beyond h3,
 .impact-grid h3,
 .stat-label {
-  font-family: var(--text);
+  font-family: var(--sans);
   font-size: var(--fs-h3);
   font-weight: 600;
   line-height: 1.3;
