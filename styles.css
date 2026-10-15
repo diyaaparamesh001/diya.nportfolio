@@ -788,7 +788,14 @@ footer { margin-top: 104px; }
   font-weight: 500;
 }
 
-.social { margin-top: 32px; }
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.social { margin-top: 0; }
 
 /* Hero intro: three lines at one size (lead), running up to the 1000px
    measure, evenly spaced, in #17191C; the sign-off is softened to 76%. */
