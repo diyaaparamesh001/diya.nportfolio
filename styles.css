@@ -645,7 +645,7 @@ footer { margin-top: 104px; }
 }
 
 .hero-text {
-  max-width: 34em;
+  max-width: var(--measure);
   margin-top: 28px;
   font-size: var(--fs-lead);
   line-height: 1.45;
@@ -731,7 +731,7 @@ footer { margin-top: 104px; }
 
 /* My philosophy */
 .philosophy-title {
-  max-width: 20em;
+  max-width: var(--measure);
   margin: 18px auto 0;
   font-family: var(--display);
   font-size: var(--fs-h2);
@@ -794,7 +794,7 @@ footer { margin-top: 104px; }
    leads (lead), the sentence explains it (body), the sign-off closes
    quietly (small). */
 .hero-intro {
-  max-width: 36em;
+  max-width: var(--measure);
   margin-top: 28px;
 }
 
@@ -808,7 +808,7 @@ footer { margin-top: 104px; }
 }
 
 .hero-intro .hero-text {
-  max-width: 30em;
+  max-width: var(--measure);
   margin-top: 12px;
   font-size: var(--fs-body);
   font-weight: 500;

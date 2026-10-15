@@ -18,4 +18,17 @@
   --lh-body: 1.6;
   --lh-tight: 1.08;
   --tracking-label: 0.12em;
+  --measure: 1000px;
 }
+
+/* Text blocks can run up to 1000px from where they start, never wider. */
+p, h1, h2, h3, h4, blockquote, li, dt, dd, figcaption { max-width: var(--measure); }
+
+/* Centred headings and statements stay centred once capped. */
+.philosophy-title,
+.eyebrow-center,
+.intervention h2,
+.intervention p,
+.t-quote p,
+.cta h2,
+.a-touch h2 { margin-left: auto; margin-right: auto; }

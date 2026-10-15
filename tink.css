@@ -156,7 +156,7 @@
 
 .t-problem .t-wide {
   margin-top: calc(55 * var(--u));
-  max-width: calc(960 * var(--u));
+  max-width: var(--measure);
   color: var(--text);
 }
 
@@ -183,7 +183,7 @@
 .t-hypothesis { padding-top: calc(104 * var(--u)); }
 
 .t-narrow {
-  max-width: calc(500 * var(--u));
+  max-width: var(--measure);
   margin-top: calc(30 * var(--u));
 }
 
@@ -305,7 +305,7 @@
 .t-ideation { padding-top: 0; }
 
 .t-ideation-intro {
-  max-width: calc(980 * var(--u));
+  max-width: var(--measure);
   margin-top: calc(28 * var(--u));
 }
 
@@ -498,7 +498,7 @@
 .t-flow { border-top: 1px solid var(--blue-line); }
 
 .t-flow-intro {
-  max-width: calc(400 * var(--u));
+  max-width: var(--measure);
   margin-top: calc(32 * var(--u));
 }
 
