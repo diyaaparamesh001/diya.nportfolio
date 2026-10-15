@@ -11,7 +11,7 @@
   /* Text colours. A Missed Connection uses these six and nothing else.
      Brightest to dimmest, then the accent and the dark ink used on the
      light section. */
-  --c-bright: #e7e1e1;  /* emphasis: the opening paragraph */
+  --c-bright: #e7e1e1;  /* emphasis: the opening question */
   --c-body: #d6d2d2;    /* body copy, captions, story panels */
   --c-text: #c8c2c2;    /* default: titles, headings, labels, lead */
   --c-muted: #8f8989;   /* secondary: nav, footer, roles, side notes */
@@ -1669,5 +1669,7 @@ svg {
 
 .cs-facts dt { font-size: var(--fs-label); letter-spacing: var(--tracking-label); }
 
-/* Opening paragraph of A Missed Connection reads in the bright tone. */
-.cs-intro { color: var(--bright); }
+/* Opening paragraph of A Missed Connection: the question stands out in
+   the bright tone, the sentence before it stays in the default text. */
+.cs-intro { color: var(--c-text); }
+.cs-intro b { color: var(--c-bright); }
