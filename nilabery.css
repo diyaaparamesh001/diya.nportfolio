@@ -28,10 +28,10 @@
 .nb .cs-header-inner .back:hover { color: var(--nb-indigo); }
 
 /* Same distance from the nav as the tink case study. */
-.nb .cs-hero { padding-top: calc(100 * var(--u)); }
+.nb .cs-hero { padding-top: calc(100 * var(--u)); padding-bottom: calc(100 * var(--u)); }
 
 @media (max-width: 900px) {
-  .nb .cs-hero { padding-top: 56px; }
+  .nb .cs-hero { padding-top: 56px; padding-bottom: 72px; }
 }
 
 /* A plain label in the accent colour, as on the other case studies. */
@@ -71,6 +71,45 @@
   .nb .cs-hero-text { width: auto; }
 
   .nb .cs-figure { align-self: stretch; }
+}
+
+/* Sections below the hero */
+.nb-section { padding: calc(120 * var(--u)) 0; border-top: 1px solid var(--line); }
+
+.nb-body {
+  margin-top: 20px;
+  font-size: var(--fs-lead);
+  line-height: 1.6;
+  color: var(--nb-ink);
+}
+
+.nb-about {
+  display: grid;
+  grid-template-columns: 1fr calc(200 * var(--u));
+  gap: 6%;
+  align-items: start;
+}
+
+.nb-about-text { max-width: calc(720 * var(--u)); }
+
+.nb-tools dt {
+  font-size: var(--fs-label);
+  font-weight: 600;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--nb-indigo);
+}
+
+.nb-tools dd {
+  margin: 20px 0 0;
+  font-size: var(--fs-lead);
+  color: var(--nb-ink);
+}
+
+@media (max-width: 900px) {
+  .nb-section { padding: 72px 0; }
+  .nb-about { grid-template-columns: 1fr; gap: 40px; }
+  .nb-about-text { max-width: none; }
 }
 
 .nb .cs-footer,
