@@ -15,5 +15,12 @@
         }
       ]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/nilaberry.html",
+      "destination": "/nilabery.html",
+      "permanent": true
+    }
   ]
 }
