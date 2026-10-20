@@ -256,6 +256,12 @@ svg {
 
 .work-card-offset { margin-top: calc(63 * var(--u)); }
 
+.work-card-center {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: calc((100% - 16 * var(--u)) / 2);
+}
+
 .work-meta {
   display: flex;
   align-items: center;
@@ -607,6 +613,8 @@ footer { margin-top: 104px; }
   .thinker-grid { grid-template-columns: 1fr; }
 
   .work-card-offset { margin-top: 0; }
+
+  .work-card-center { width: auto; justify-self: stretch; }
 
   .bottom-bar { padding: 20px 0; font-size: var(--fs-tag); }
 }
