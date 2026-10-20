@@ -11,6 +11,8 @@
   --red: var(--nb-indigo);
   --c-muted: var(--nb-muted);
   --c-text: var(--nb-ink);
+  --c-bright: var(--nb-ink);
+  --c-body: var(--nb-ink);
   --line: rgba(29, 24, 70, 0.16);
   --sans: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   --display: var(--sans);
