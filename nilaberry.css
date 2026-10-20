@@ -36,7 +36,12 @@
   margin-top: 0;
 }
 
-.nb .cs-figure img { width: 100%; }
+.nb .cs-figure img {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  box-shadow: 0 18px 40px rgba(29, 24, 70, 0.12);
+}
 
 .nb .cs-footer,
 .nb .cs-bottom { border-top-color: var(--line); }
