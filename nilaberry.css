@@ -30,6 +30,8 @@
 
 .nb .cs-title { font-weight: 700; letter-spacing: -0.02em; }
 
+.nb .cs-lead { font-weight: 600; }
+
 /* The laptop mockup is wide, so the figure takes the rest of the row. */
 .nb .cs-figure {
   flex: 1;
