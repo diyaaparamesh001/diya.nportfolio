@@ -1,0 +1,66 @@
+/* nilaberry studios: the light cream theme of the studio's own site.
+   Loaded after case-study.css and scoped to body.nb. */
+.nb {
+  --bg: #efede6;
+  --nb-ink: #1d1846;
+  --nb-muted: #5d5a72;
+  --nb-indigo: #2a1aa8;
+  --text: var(--nb-ink);
+  --bright: var(--nb-ink);
+  --soft: var(--nb-muted);
+  --red: var(--nb-indigo);
+  --c-muted: var(--nb-muted);
+  --c-text: var(--nb-ink);
+  --line: rgba(29, 24, 70, 0.16);
+  --sans: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --display: var(--sans);
+}
+
+.nb .cs-header-inner { color: var(--nb-ink); }
+
+.nb .cs-header-inner strong,
+.nb .cs-header-inner .back { font-weight: 600; }
+
+.nb .cs-header-inner a:hover,
+.nb .cs-header-inner .back:hover { color: var(--nb-indigo); }
+
+.nb .cs-eyebrow { border-bottom-color: var(--nb-ink); }
+
+.nb .cs-title { font-weight: 700; letter-spacing: -0.02em; }
+
+/* The laptop mockup is wide, so the figure takes the rest of the row. */
+.nb .cs-figure {
+  flex: 1;
+  width: auto;
+  aspect-ratio: auto;
+  margin-top: 0;
+}
+
+.nb .cs-figure img { width: 100%; }
+
+.nb .cs-footer,
+.nb .cs-bottom { border-top-color: var(--line); }
+
+.nb .all-work { color: var(--nb-ink); }
+.nb .all-work::before { background: var(--nb-muted); }
+
+.nb .prev {
+  grid-column: 1;
+  justify-self: start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: calc(4 * var(--n));
+  font-size: max(calc(11 * var(--n)), 12px);
+  color: var(--nb-muted);
+}
+
+.nb .prev .next-label { color: var(--nb-ink); }
+
+.nb .prev strong {
+  font-size: max(calc(16 * var(--n)), 16px);
+  font-weight: 700;
+  color: var(--nb-ink);
+}
+
+.nb .prev:hover .next-label svg { transform: translateX(-3px); }

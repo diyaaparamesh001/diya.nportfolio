@@ -1281,8 +1281,10 @@
   color: var(--t-muted);
 }
 
-.tink .prev strong { font-size: var(--fs-lead); font-weight: 600; letter-spacing: 0; color: var(--t-ink); text-transform: none; }
-.tink .prev span:not(.next-label) { font-size: var(--fs-small); font-weight: 400; letter-spacing: 0; text-transform: none; color: var(--t-muted); }
+.tink .prev strong,
+.tink .next strong { font-size: var(--fs-lead); font-weight: 600; letter-spacing: 0; color: var(--t-ink); text-transform: none; }
+.tink .prev span:not(.next-label),
+.tink .next span:not(.next-label) { font-size: var(--fs-small); font-weight: 400; letter-spacing: 0; text-transform: none; color: var(--t-muted); }
 .tink .cs-header span { color: var(--t-ink); }
 
 /* One left edge: every section from the prototype onwards sits in the
