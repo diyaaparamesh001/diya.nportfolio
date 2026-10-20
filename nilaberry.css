@@ -33,19 +33,39 @@
 
 .nb .cs-lead { font-weight: 600; }
 
-/* The laptop mockup is wide, so the figure takes the rest of the row. */
+/* Hero: text on the left, and the generated site runs off the right
+   edge of the page so it reads as a large, live website. */
+/* Clip the bleed at the viewport edge so the page never scrolls sideways. */
+.nb main { overflow-x: clip; }
+
+.nb .cs-hero-grid { gap: 6%; }
+
+.nb .cs-hero-text { flex: none; width: 46%; }
+
 .nb .cs-figure {
-  flex: 1;
-  width: auto;
+  flex: none;
+  width: 62vw;
   aspect-ratio: auto;
-  margin-top: 0;
+  margin-top: calc(20 * var(--u));
 }
 
 .nb .cs-figure img {
   width: 100%;
   border: 1px solid var(--line);
-  border-radius: 10px;
-  box-shadow: 0 18px 40px rgba(29, 24, 70, 0.12);
+  border-right: 0;
+  border-radius: 14px 0 0 14px;
+  box-shadow: 0 30px 60px rgba(29, 24, 70, 0.15);
+}
+
+@media (max-width: 1080px) {
+  .nb .cs-hero-grid { flex-direction: column; gap: 56px; }
+  .nb .cs-hero-text { width: auto; }
+
+  .nb .cs-figure {
+    align-self: flex-start;
+    width: calc(100% + var(--gutter));
+    margin-top: 0;
+  }
 }
 
 .nb .cs-footer,
