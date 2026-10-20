@@ -33,30 +33,23 @@
 
 .nb .cs-lead { font-weight: 600; }
 
-/* Hero: text on the left, and the generated site runs to the right
-   edge of the window so it reads as a large, live website. */
-/* Clip the bleed at the viewport edge so the page never scrolls sideways. */
-.nb main { overflow-x: clip; }
-
-.nb .cs-hero-grid { gap: 6%; }
+/* Hero: text on the left, the generated site on the right inside the
+   page margins, centred vertically against the text. */
+.nb .cs-hero-grid { align-items: center; gap: 6%; }
 
 .nb .cs-hero-text { flex: none; width: 46%; }
 
-/* The figure fills the rest of the row and stretches to the window's
-   right edge, so the whole screenshot shows, flush with the edge. */
 .nb .cs-figure {
   flex: 1;
   width: auto;
   aspect-ratio: auto;
-  margin-top: calc(20 * var(--u));
-  margin-right: calc(50% - 50vw);
+  margin-top: 0;
 }
 
 .nb .cs-figure img {
   width: 100%;
   border: 1px solid var(--line);
-  border-right: 0;
-  border-radius: 14px 0 0 14px;
+  border-radius: 14px;
   box-shadow: 0 30px 60px rgba(29, 24, 70, 0.15);
 }
 
@@ -64,10 +57,7 @@
   .nb .cs-hero-grid { flex-direction: column; gap: 56px; }
   .nb .cs-hero-text { width: auto; }
 
-  .nb .cs-figure {
-    align-self: stretch;
-    margin-top: 0;
-  }
+  .nb .cs-figure { align-self: stretch; }
 }
 
 .nb .cs-footer,
