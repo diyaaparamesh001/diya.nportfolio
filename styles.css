@@ -326,6 +326,11 @@ svg {
   object-fit: cover;
 }
 
+.work-image img.work-image-zoom {
+  transform: scale(1.4);
+  transform-origin: 50% 55%;
+}
+
 .pills {
   position: absolute;
   left: calc(13 * var(--u));
