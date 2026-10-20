@@ -1,4 +1,5 @@
 /* nilaberry studios: the light cream theme of the studio's own site.
+   Titles in Bricolage Grotesque, everything else in Instrument Sans.
    Loaded after case-study.css and scoped to body.nb. */
 .nb {
   --bg: #efede6;
@@ -14,8 +15,8 @@
   --c-bright: var(--nb-ink);
   --c-body: var(--nb-ink);
   --line: rgba(29, 24, 70, 0.16);
-  --sans: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --display: var(--sans);
+  --sans: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --display: "Bricolage Grotesque", var(--sans);
 }
 
 .nb .cs-header-inner { color: var(--nb-ink); }
