@@ -27,7 +27,20 @@
 .nb .cs-header-inner a:hover,
 .nb .cs-header-inner .back:hover { color: var(--nb-indigo); }
 
-.nb .cs-eyebrow { border-bottom-color: var(--nb-ink); }
+/* Same distance from the nav as the tink case study. */
+.nb .cs-hero { padding-top: calc(100 * var(--u)); }
+
+@media (max-width: 900px) {
+  .nb .cs-hero { padding-top: 56px; }
+}
+
+/* A plain label in the accent colour, as on the other case studies. */
+.nb .cs-eyebrow {
+  display: block;
+  padding-bottom: 0;
+  border-bottom: 0;
+  color: var(--nb-indigo);
+}
 
 .nb .cs-title { font-weight: 700; letter-spacing: -0.02em; }
 
