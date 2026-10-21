@@ -220,18 +220,7 @@
   color: var(--nb-ink);
 }
 
-/* Colour, reconsidered: a lead line, then the palette grouped by role. */
-.nb-lead-line {
-  max-width: calc(820 * var(--u));
-  margin-top: calc(40 * var(--u));
-  font-family: var(--display);
-  font-size: var(--fs-h3);
-  font-weight: 600;
-  line-height: 1.25;
-  letter-spacing: -0.01em;
-  color: var(--nb-indigo);
-}
-
+/* Colour, reconsidered: the palette grouped by role. */
 .nb-palette {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
