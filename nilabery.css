@@ -122,11 +122,22 @@
   border-radius: 16px;
 }
 
+/* Number followed by a short dash, like tink's section numbers. */
 .nb-card-num {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   font-size: var(--fs-tag);
   font-weight: 600;
   letter-spacing: var(--tracking-label);
   color: var(--nb-indigo);
+}
+
+.nb-card-num::after {
+  content: "";
+  width: 14px;
+  height: 2px;
+  background: currentColor;
 }
 
 .nb-card h4 {
