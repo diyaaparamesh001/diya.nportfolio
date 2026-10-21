@@ -209,6 +209,8 @@
   .nb-cards { grid-template-columns: repeat(3, 1fr); }
 }
 
+.nb-compare-eyebrow { margin-bottom: calc(40 * var(--u)); }
+
 /* Claude's version and my redesign side by side, each under its own
    section heading (h2 on the type scale). The screenshots are shown at
    their own widths. */
