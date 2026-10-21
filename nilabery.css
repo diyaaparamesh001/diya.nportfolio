@@ -244,6 +244,7 @@
 
 /* My redesign: several screenshots stacked with no gap, in one frame. */
 .nb-stack {
+  align-self: start;
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 12px;
