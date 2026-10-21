@@ -417,6 +417,46 @@
 
 .nb-ba-gallery .nb-ba-mid { align-self: center; }
 
+/* The notes centre against Claude's column; the taller redesign column
+   spans both rows so it doesn't pull them down. */
+@media (min-width: 901px) {
+  .nb-ba-gallery { grid-template-rows: auto 1fr; }
+  .nb-ba-gallery > .nb-ba-shot { grid-column: 1; grid-row: 1; }
+  .nb-ba-gallery > .nb-ba-mid { grid-column: 2; grid-row: 1; }
+  .nb-ba-gallery > .nb-ba-col { grid-column: 3; grid-row: 1 / 3; }
+}
+
+/* Callout under the redesign: a doodle curls from the "Your story could
+   be next" card back to a note on its left. */
+.nb-callout {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.nb-callout p {
+  flex: 1;
+  font-size: var(--fs-small);
+  line-height: 1.55;
+  color: var(--nb-ink);
+}
+
+.nb-callout-arrow {
+  flex: none;
+  width: 110px;
+  margin-right: 10%;
+  overflow: visible;
+}
+
+.nb-callout-arrow path {
+  fill: none;
+  stroke: var(--nb-ink);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 /* A second doodle and the principle follow the note, one block apart. */
 .nb-ba-arrow-2 { margin-top: calc(40 * var(--u)); transform: scaleY(-1); }
 
