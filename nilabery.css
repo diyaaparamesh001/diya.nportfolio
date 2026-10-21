@@ -294,6 +294,8 @@
 
 }
 
+.nb-palette-next { margin-top: calc(72 * var(--u)); }
+
 .nb-compare-eyebrow { margin-bottom: calc(40 * var(--u)); }
 
 /* Claude's version and my redesign side by side, each under its own
