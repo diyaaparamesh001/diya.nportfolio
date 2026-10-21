@@ -512,6 +512,11 @@
   box-shadow: 0 24px 50px rgba(26, 16, 51, 0.12);
 }
 
+/* Screenshots of different heights line up along the top; the note
+   stays centred between them. */
+.nb-ba-top { align-items: start; }
+.nb-ba-top .nb-ba-mid { align-self: center; }
+
 /* Buttons, before and after: the pills on their own. */
 .nb-btns { display: grid; justify-items: center; gap: 24px; }
 
