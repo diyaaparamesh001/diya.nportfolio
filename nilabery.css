@@ -75,7 +75,21 @@
 }
 
 /* Sections below the hero */
-.nb-section { padding: calc(80 * var(--u)) 0; }
+.nb-section { padding: calc(40 * var(--u)) 0; }
+
+/* A rounded Nila blue panel, like the hero block on the studio's site.
+   Text turns cream, labels yellow, and the cards stay cream. */
+.nb-panel {
+  padding: calc(64 * var(--u)) calc(56 * var(--u));
+  background: var(--nb-indigo);
+  border-radius: 28px;
+  color: var(--bg);
+}
+
+.nb-panel .cs-eyebrow { color: #FFD23F; }
+.nb-panel .nb-body { color: var(--bg); }
+.nb-panel .nb-subhead { color: rgba(240, 238, 233, 0.7); }
+.nb-panel .nb-card { border-color: transparent; }
 
 .nb-body {
   max-width: calc(760 * var(--u));
@@ -177,11 +191,11 @@
   color: var(--nb-muted);
 }
 
-.nb-swatches { display: flex; flex-wrap: wrap; gap: 5px; margin-top: auto; padding-top: 16px; }
+.nb-swatches { display: flex; flex-wrap: wrap; gap: 4px; margin-top: auto; padding-top: 16px; }
 
 .nb-swatches span {
-  width: 17px;
-  height: 17px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
   background: var(--sw);
   box-shadow: inset 0 0 0 1px rgba(26, 16, 51, 0.12);
@@ -197,6 +211,7 @@
 
 @media (max-width: 900px) {
   .nb-section { padding: 72px 0; }
+  .nb-panel { padding: 40px 20px; border-radius: 20px; }
   .nb-intro-grid { grid-template-columns: 1fr; gap: 40px; }
   .nb-cards { grid-template-columns: repeat(2, 1fr); }
 }
