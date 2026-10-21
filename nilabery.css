@@ -379,12 +379,17 @@
   box-shadow: 0 0 0 5px rgba(255, 46, 136, 0.25);
 }
 
+/* Principles share the before/after columns, so 01 sits under Claude's
+   side and 02 under mine, edge to edge. */
 .nb-principles {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 6%;
+  grid-template-columns: minmax(0, 1fr) calc(200 * var(--u)) minmax(0, 1fr);
+  column-gap: calc(24 * var(--u));
+  row-gap: 32px;
   margin-top: calc(40 * var(--u));
 }
+
+.nb-principle:nth-child(2n) { grid-column: 3; }
 
 .nb-principle .nb-card-num { color: var(--nb-indigo); }
 
@@ -406,6 +411,7 @@
 
 @media (max-width: 900px) {
   .nb-principles { grid-template-columns: 1fr; gap: 32px; }
+  .nb-principle:nth-child(2n) { grid-column: auto; }
 }
 
 /* Gallery: each side is two screenshots joined into one frame, lined up
@@ -490,9 +496,11 @@
 .nb-ba-gallery .nb-stack img { border: 0; border-radius: 0; box-shadow: none; }
 
 /* Recognition: an image and a screen recording, lined up along the top. */
-/* Columns sized by each item's aspect ratio (678:298 and 1200:452) so the
-   image and the video come out the same height. */
-.nb-ba-recog { grid-template-columns: minmax(0, 2.275fr) calc(180 * var(--u)) minmax(0, 2.655fr); align-items: start; }
+/* Both fill the standard columns in one slightly taller frame; the
+   image's blue margins and the recording's edges are trimmed to fit. */
+.nb-ba-recog { align-items: start; }
+.nb-ba-recog .nb-ba-shot img,
+.nb-ba-recog .nb-ba-shot video { aspect-ratio: 2.4; object-fit: cover; }
 .nb-ba-recog .nb-ba-mid { align-self: center; }
 
 .nb-ba-shot video {
