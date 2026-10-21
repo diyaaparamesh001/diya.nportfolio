@@ -520,6 +520,9 @@
 /* Two screenshots stacked on one side with a small gap. */
 .nb-ba-split .nb-ba-col { display: grid; gap: 12px; }
 
+/* Two recordings in one shared frame so they match in height. */
+.nb-ba-videos .nb-ba-shot video { aspect-ratio: 2.3; object-fit: cover; }
+
 /* Buttons, before and after: the pills on their own. */
 .nb-btns { display: grid; justify-items: center; gap: 24px; }
 
