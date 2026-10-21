@@ -106,6 +106,9 @@
   padding-top: calc(80 * var(--u));
   border-top: 1px solid var(--line);
 }
+
+/* Conclusion text at body size, matching the intro paragraph at the top. */
+.nb-conclusion .nb-body { font-size: var(--fs-body); line-height: 1.6; }
 .nb-panel .nb-subhead { color: rgba(240, 238, 233, 0.7); }
 .nb-panel .nb-card { border-color: transparent; }
 
