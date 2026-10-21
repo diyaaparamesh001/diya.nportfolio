@@ -229,7 +229,7 @@
   margin: 0;
 }
 
-.nb-compare-col .nb-compare-title { align-self: end; }
+.nb-compare-col .nb-compare-title { align-self: start; }
 
 .nb-compare-title {
   margin-bottom: calc(40 * var(--u));
