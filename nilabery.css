@@ -78,7 +78,7 @@
 .nb-section { padding: calc(40 * var(--u)) 0; }
 
 /* A rounded Nila blue panel, like the hero block on the studio's site.
-   Text turns cream, labels yellow, and the cards stay cream. */
+   Text and labels turn cream, and the cards stay cream. */
 .nb-panel {
   padding: calc(64 * var(--u)) calc(56 * var(--u));
   background: var(--nb-indigo);
@@ -86,7 +86,7 @@
   color: var(--bg);
 }
 
-.nb-panel .cs-eyebrow { color: #FFD23F; }
+.nb-panel .cs-eyebrow { color: var(--bg); }
 .nb-panel .nb-body { color: var(--bg); }
 .nb-panel .nb-subhead { color: rgba(240, 238, 233, 0.7); }
 .nb-panel .nb-card { border-color: transparent; }
