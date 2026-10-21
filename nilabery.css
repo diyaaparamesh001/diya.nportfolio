@@ -231,7 +231,7 @@
   margin: 0;
 }
 
-.nb-compare-col .nb-compare-title { align-self: start; }
+.nb-compare-col .nb-compare-title { align-self: start; justify-self: start; }
 
 .nb-compare-title {
   margin-bottom: calc(40 * var(--u));
@@ -240,7 +240,7 @@
   font-weight: 700;
   line-height: 1.12;
   letter-spacing: -0.02em;
-  text-align: center;
+  text-align: left;
   color: var(--nb-ink);
 }
 
