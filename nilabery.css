@@ -209,8 +209,8 @@
   .nb-cards { grid-template-columns: repeat(3, 1fr); }
 }
 
-/* Claude's first version: the title, then the full-length screenshot
-   centred below it, shown at its own width. */
+/* Claude's version and my redesign: a title, then the full-length
+   screenshot centred below it, shown at its own width. */
 .nb-heading {
   font-family: var(--display);
   font-size: var(--fs-h2);
@@ -221,12 +221,14 @@
 }
 
 .nb-output-shot {
-  max-width: 356px;
+  width: fit-content;
+  max-width: 100%;
   margin: calc(48 * var(--u)) auto 0;
 }
 
 .nb-output-shot img {
-  width: 100%;
+  max-width: 100%;
+  height: auto;
   border: 1px solid var(--line);
   border-radius: 12px;
   box-shadow: 0 24px 50px rgba(26, 16, 51, 0.12);
