@@ -449,12 +449,32 @@
   overflow: visible;
 }
 
-.nb-callout-arrow path {
+.nb-callout-sweep { display: none; }
+
+.nb-callout-arrow path,
+.nb-callout-sweep path {
   fill: none;
   stroke: var(--nb-ink);
   stroke-width: 3;
   stroke-linecap: round;
   stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+/* Wide screens: the note sits under Claude's column and a long doodle
+   sweeps from the pitch card back across to it, balancing the two sides. */
+@media (min-width: 901px) {
+  .nb-ba-gallery > .nb-callout {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    gap: 0;
+    align-items: center;
+    margin-top: 0;
+  }
+
+  .nb-callout p { flex: 0 0 calc((100% - 200 * var(--u) - 48 * var(--u)) / 2); padding-right: 24px; }
+  .nb-callout-arrow { display: none; }
+  .nb-callout-sweep { display: block; flex: 1; height: 120px; margin-top: -40px; overflow: visible; }
 }
 
 /* A second doodle and the principle follow the note, one block apart. */
