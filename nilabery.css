@@ -352,13 +352,52 @@
   color: var(--nb-ink);
 }
 
-/* Screenshots of different heights line up along their top edges, and
-   the note between them stays centred against the taller one. */
-.nb-ba-top { align-items: start; grid-template-columns: minmax(0, 1fr) calc(240 * var(--u)) minmax(0, 1fr); }
-.nb-ba-top .nb-ba-mid { align-self: center; }
+/* Before and after with pins: numbered pink dots on the redesign match
+   the numbered principles below the images. */
+.nb-ba-pins { grid-template-columns: minmax(0, 1fr) calc(120 * var(--u)) minmax(0, 1fr); }
 
-.nb-ba-mid .nb-ba-lead { font-weight: 600; }
-.nb-ba-mid b { font-weight: 600; }
+.nb-pin {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #FF2E88;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  box-shadow: 0 0 0 5px rgba(255, 46, 136, 0.25);
+}
+
+.nb-principles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6%;
+  margin-top: calc(40 * var(--u));
+}
+
+.nb-principle .nb-card-num { color: #FF2E88; }
+
+.nb-principle h3 {
+  margin: 10px 0 0;
+  font-family: var(--display);
+  font-size: var(--fs-h3);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--nb-ink);
+}
+
+.nb-principle p {
+  margin-top: 8px;
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  color: var(--nb-muted);
+}
+
+@media (max-width: 900px) {
+  .nb-principles { grid-template-columns: 1fr; gap: 32px; }
+}
 
 /* Buttons, before and after: the pills on their own. */
 .nb-btns { display: grid; justify-items: center; gap: 24px; }
