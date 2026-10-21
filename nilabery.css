@@ -352,6 +352,14 @@
   color: var(--nb-ink);
 }
 
+/* Screenshots of different heights line up along their top edges, and
+   the note between them stays centred against the taller one. */
+.nb-ba-top { align-items: start; grid-template-columns: minmax(0, 1fr) calc(240 * var(--u)) minmax(0, 1fr); }
+.nb-ba-top .nb-ba-mid { align-self: center; }
+
+.nb-ba-mid .nb-ba-lead { font-weight: 600; }
+.nb-ba-mid b { font-weight: 600; }
+
 /* Buttons, before and after: the pills on their own. */
 .nb-btns { display: grid; justify-items: center; gap: 24px; }
 
