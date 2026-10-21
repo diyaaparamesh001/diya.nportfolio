@@ -288,17 +288,6 @@
   color: var(--nb-muted);
 }
 
-.nb-role {
-  margin-top: 14px;
-  font-size: var(--fs-small);
-  line-height: 1.55;
-  color: var(--nb-muted);
-}
-
-.nb-role b { font-weight: 600; color: var(--nb-ink); }
-
-.nb-role + .nb-sw-list { margin-top: 32px; }
-
 @media (max-width: 900px) {
   .nb-palette { grid-template-columns: 1fr; gap: 48px; }
   .nb-sw-chip { width: 72px; height: 72px; }
