@@ -377,7 +377,7 @@
   margin-top: calc(40 * var(--u));
 }
 
-.nb-principle .nb-card-num { color: #FF2E88; }
+.nb-principle .nb-card-num { color: var(--nb-indigo); }
 
 .nb-principle h3 {
   margin: 10px 0 0;
