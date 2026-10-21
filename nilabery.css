@@ -294,6 +294,69 @@
 
 .nb-palette-next { margin-top: calc(40 * var(--u)); }
 
+/* Before and after: two screenshots with a doodle arrow and a note
+   between them. Hand-drawn loops circle the title and subtext. */
+.nb-ba {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) calc(200 * var(--u)) minmax(0, 1fr);
+  gap: calc(24 * var(--u));
+  align-items: center;
+  margin-top: calc(40 * var(--u));
+}
+
+.nb-ba-shot { position: relative; margin: 0; }
+
+.nb-ba-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 24px 50px rgba(26, 16, 51, 0.12);
+}
+
+.nb-ba-circle {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.nb-ba-circle path {
+  fill: none;
+  stroke: #FF2E88;
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.nb-ba-mid { text-align: center; }
+
+.nb-ba-arrow { width: 100%; max-width: 150px; overflow: visible; }
+
+.nb-ba-arrow path {
+  fill: none;
+  stroke: var(--nb-ink);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.nb-ba-mid p {
+  margin-top: 16px;
+  font-size: var(--fs-small);
+  line-height: 1.55;
+  color: var(--nb-ink);
+}
+
+@media (max-width: 900px) {
+  .nb-ba { grid-template-columns: 1fr; gap: 24px; }
+  .nb-ba-arrow { max-width: 110px; transform: rotate(90deg); }
+}
+
 .nb-compare-eyebrow { margin-bottom: calc(40 * var(--u)); }
 
 /* Claude's version and my redesign side by side, each under its own
