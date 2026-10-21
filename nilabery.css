@@ -539,6 +539,10 @@
   }
 }
 
+/* Logos: two tiles of the same size, kept small so the low-resolution
+   originals stay crisp, centred in their columns. */
+.nb-ba-logo .nb-ba-shot { justify-self: center; width: min(100%, 360px); }
+
 /* Buttons, before and after: the pills on their own. */
 .nb-btns { display: grid; justify-items: center; gap: 24px; }
 
