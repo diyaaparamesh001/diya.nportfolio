@@ -210,28 +210,34 @@
 }
 
 /* Claude's version and my redesign side by side, each under its own
-   title. The screenshots are shown at their own widths. */
+   section heading (h2 on the type scale). The screenshots are shown at
+   their own widths. */
 .nb-compare {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 6%;
+  column-gap: 6%;
   align-items: start;
 }
 
+/* Each column spans the same two rows (title, image), so the screenshots
+   start level even when one title wraps onto two lines. */
 .nb-compare-col {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-row: span 2;
+  grid-template-rows: subgrid;
+  justify-items: center;
   margin: 0;
 }
+
+.nb-compare-col .nb-compare-title { align-self: end; }
 
 .nb-compare-title {
   margin-bottom: calc(40 * var(--u));
   font-family: var(--display);
-  font-size: var(--fs-h3);
+  font-size: var(--fs-h2);
   font-weight: 700;
-  line-height: 1.15;
-  letter-spacing: -0.01em;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
   text-align: center;
   color: var(--nb-ink);
 }
@@ -246,7 +252,8 @@
 
 @media (max-width: 900px) {
   .nb-section { padding: 72px 0; }
-  .nb-compare { grid-template-columns: 1fr; gap: 64px; }
+  .nb-compare { grid-template-columns: 1fr; }
+  .nb-compare-col + .nb-compare-col { margin-top: 64px; }
   .nb-panel { padding: 40px 20px; border-radius: 20px; }
   .nb-intro-grid { grid-template-columns: 1fr; gap: 40px; }
   .nb-cards { grid-template-columns: repeat(2, 1fr); }
