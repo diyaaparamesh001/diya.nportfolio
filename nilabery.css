@@ -489,6 +489,19 @@
 
 .nb-ba-gallery .nb-stack img { border: 0; border-radius: 0; box-shadow: none; }
 
+/* Recognition: an image and a screen recording, lined up along the top. */
+.nb-ba-recog { grid-template-columns: minmax(0, 1fr) calc(120 * var(--u)) minmax(0, 1fr); align-items: start; }
+.nb-ba-recog .nb-ba-mid { align-self: center; }
+
+.nb-ba-shot video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 24px 50px rgba(26, 16, 51, 0.12);
+}
+
 /* Buttons, before and after: the pills on their own. */
 .nb-btns { display: grid; justify-items: center; gap: 24px; }
 
