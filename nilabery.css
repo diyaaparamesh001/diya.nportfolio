@@ -113,14 +113,43 @@
   list-style: none;
 }
 
+/* On hover the card fills with its own brand colour and the content
+   sits in a Nila blue panel inside it. */
 .nb-card {
   display: flex;
-  flex-direction: column;
   max-width: none;
-  padding: 22px 20px 24px;
+  padding: 10px;
   background: var(--bg);
   border: 1px solid var(--line);
   border-radius: 16px;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.nb-card-inner {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 12px 10px 14px;
+  border-radius: 9px;
+  transition: background-color 0.3s;
+}
+
+.nb-card:hover { background: var(--hover); border-color: var(--hover); }
+.nb-card:hover .nb-card-inner { background: var(--nb-indigo); }
+
+.nb-card:hover h4,
+.nb-card:hover .nb-type { color: var(--bg); }
+.nb-card:hover p { color: rgba(240, 238, 233, 0.78); }
+.nb-card:hover .nb-card-num { color: var(--hover); }
+.nb-card:hover .nb-swatches span { box-shadow: 0 0 0 1px rgba(240, 238, 233, 0.5); }
+
+.nb-card h4,
+.nb-card p,
+.nb-card-num,
+.nb-type { transition: color 0.3s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .nb-card, .nb-card-inner, .nb-card h4, .nb-card p, .nb-card-num, .nb-type { transition: none; }
 }
 
 /* Number followed by a short dash, like tink's section numbers. */
