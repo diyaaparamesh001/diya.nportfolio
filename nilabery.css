@@ -408,6 +408,17 @@
   .nb-principles { grid-template-columns: 1fr; gap: 32px; }
 }
 
+/* Gallery: each side is two screenshots joined into one frame, lined up
+   along the top, with the note centred between them. */
+.nb-ba-gallery {
+  grid-template-columns: minmax(0, 1fr) calc(200 * var(--u)) minmax(0, 1fr);
+  align-items: start;
+}
+
+.nb-ba-gallery .nb-ba-mid { align-self: center; }
+
+.nb-ba-gallery .nb-stack img { border: 0; border-radius: 0; box-shadow: none; }
+
 /* Buttons, before and after: the pills on their own. */
 .nb-btns { display: grid; justify-items: center; gap: 24px; }
 
