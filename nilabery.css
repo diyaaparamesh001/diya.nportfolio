@@ -74,7 +74,7 @@
 }
 
 /* Sections below the hero */
-.nb-section { padding: calc(80 * var(--u)) 0; border-top: 1px solid var(--line); }
+.nb-section { padding: calc(80 * var(--u)) 0; }
 
 .nb-body {
   max-width: calc(760 * var(--u));
