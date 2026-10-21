@@ -354,7 +354,7 @@
 
 /* Before and after with pins: numbered pink dots on the redesign match
    the numbered principles below the images. */
-.nb-ba-pins { grid-template-columns: minmax(0, 1fr) calc(120 * var(--u)) minmax(0, 1fr); }
+.nb-ba-pins { grid-template-columns: minmax(0, 1fr) calc(200 * var(--u)) minmax(0, 1fr); }
 
 .nb-pin {
   position: absolute;
