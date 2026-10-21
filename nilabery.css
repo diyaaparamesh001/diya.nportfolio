@@ -209,6 +209,17 @@
   .nb-cards { grid-template-columns: repeat(3, 1fr); }
 }
 
+/* Section heading: h2 on the type scale, under its eyebrow label. */
+.nb-heading {
+  margin-top: 16px;
+  font-family: var(--display);
+  font-size: var(--fs-h2);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  color: var(--nb-ink);
+}
+
 .nb-compare-eyebrow { margin-bottom: calc(40 * var(--u)); }
 
 /* Claude's version and my redesign side by side, each under its own
