@@ -517,6 +517,9 @@
 .nb-ba-top { align-items: start; }
 .nb-ba-top .nb-ba-mid { align-self: center; }
 
+/* Two screenshots stacked on one side with a small gap. */
+.nb-ba-split .nb-ba-col { display: grid; gap: 12px; }
+
 /* Buttons, before and after: the pills on their own. */
 .nb-btns { display: grid; justify-items: center; gap: 24px; }
 
