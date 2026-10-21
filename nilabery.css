@@ -97,6 +97,7 @@
 
 .nb-panel .cs-eyebrow { color: var(--bg); }
 .nb-panel .nb-body { color: var(--bg); }
+.nb-body b { font-weight: 600; }
 .nb-panel .nb-subhead { color: rgba(240, 238, 233, 0.7); }
 .nb-panel .nb-card { border-color: transparent; }
 
