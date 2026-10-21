@@ -29,7 +29,7 @@
 .nb .cs-header-inner .back:hover { color: var(--nb-indigo); }
 
 /* Same distance from the nav as the tink case study. */
-.nb .cs-hero { padding-top: calc(100 * var(--u)); padding-bottom: calc(100 * var(--u)); }
+.nb .cs-hero { padding-top: calc(100 * var(--u)); padding-bottom: calc(40 * var(--u)); }
 
 @media (max-width: 900px) {
   .nb .cs-hero { padding-top: 56px; padding-bottom: 72px; }
@@ -46,6 +46,15 @@
 .nb .cs-title { font-weight: 700; letter-spacing: -0.02em; }
 
 .nb .cs-lead { font-weight: 600; }
+
+/* One spacing rhythm for the whole case study:
+   label to what follows 16px, title to text 20px, text to text 20px,
+   and 40u between blocks (text, images, rows of cards). */
+.nb .cs-title { margin-top: 16px; }
+.nb .cs-lead,
+.nb .cs-intro { margin-top: 20px; }
+.nb .cs-facts { margin-top: calc(40 * var(--u)); }
+.nb .cs-eyebrow + .nb-body { margin-top: 16px; }
 
 /* Hero: text on the left, the generated site on the right inside the
    page margins, centred vertically against the text. */
@@ -122,7 +131,7 @@
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 16px;
-  margin: 20px 0 0;
+  margin: 16px 0 0;
   padding: 0;
   list-style: none;
 }
@@ -240,7 +249,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
-  margin: 20px 0 0;
+  margin: 16px 0 0;
   padding: 0;
   list-style: none;
 }
@@ -421,7 +430,7 @@
   .nb-ba-arrow { max-width: 110px; margin: 24px 0; transform: rotate(90deg); }
 }
 
-.nb-compare-eyebrow { margin-bottom: calc(40 * var(--u)); }
+.nb-compare-eyebrow { margin-bottom: 16px; }
 
 /* Claude's version and my redesign side by side, each under its own
    section heading (h2 on the type scale). The screenshots are shown at
