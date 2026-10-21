@@ -334,11 +334,8 @@
             <path d="M98 4 C 112 30, 104 58, 78 68 C 60 75, 40 72, 12 70" />
             <path d="M26 58 L11 70 L27 81" />
           </svg>
-          <svg class="nb-callout-sweep" viewBox="0 0 700 120" preserveAspectRatio="none" aria-hidden="true">
-            <path d="M612 4 C 640 52, 610 92, 520 100 C 380 112, 200 96, 22 80" />
-            <path d="M44 62 L20 80 L44 98" />
-          </svg>
         </div>
+        <svg class="nb-callout-sweep" aria-hidden="true"><path class="nb-sweep-line" /><path class="nb-sweep-head" /></svg>
       </div>
     </section>
   </main>
@@ -360,6 +357,35 @@
       </span>
     </div>
   </footer>
+  <script>
+    // Draw the gallery callout doodle from the pitch card to the note.
+    (() => {
+      const grid = document.querySelector('.nb-ba-gallery');
+      if (!grid) return;
+      const svg = grid.querySelector('.nb-callout-sweep');
+      const line = svg.querySelector('.nb-sweep-line');
+      const head = svg.querySelector('.nb-sweep-head');
+      const shot = grid.querySelector('.nb-ba-col .nb-ba-shot');
+      const note = grid.querySelector('.nb-callout p');
+      const draw = () => {
+        if (getComputedStyle(svg).display === 'none') return;
+        const g = grid.getBoundingClientRect();
+        const s = shot.getBoundingClientRect();
+        const n = note.getBoundingClientRect();
+        svg.setAttribute('width', g.width);
+        svg.setAttribute('height', g.height);
+        const x1 = s.left - g.left + s.width * 0.8, y1 = s.bottom - g.top + 6;
+        const x2 = n.right - g.left + 24, y2 = n.top - g.top + n.height / 2;
+        const dip = Math.max(y1, y2) + 36;
+        const mx = (x1 + x2) / 2;
+        line.setAttribute('d', `M${x1} ${y1} C ${x1 + 6} ${dip}, ${x1 - 40} ${dip}, ${mx} ${dip} S ${x2 + 50} ${y2}, ${x2} ${y2}`);
+        head.setAttribute('d', `M${x2 + 20} ${y2 - 16} L${x2} ${y2} L${x2 + 22} ${y2 + 14}`);
+      };
+      addEventListener('load', draw);
+      addEventListener('resize', draw);
+      new ResizeObserver(draw).observe(grid);
+    })();
+  </script>
   <script src="cursor.js" defer></script>
 </body>
 </html>
