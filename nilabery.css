@@ -242,7 +242,21 @@
   color: var(--nb-ink);
 }
 
-.nb-compare-col img {
+/* My redesign: several screenshots stacked with no gap, in one frame. */
+.nb-stack {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 24px 50px rgba(26, 16, 51, 0.12);
+}
+
+.nb-stack img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.nb-compare-col > img {
   max-width: 100%;
   height: auto;
   border: 1px solid var(--line);
