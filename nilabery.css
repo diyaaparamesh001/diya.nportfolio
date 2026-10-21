@@ -352,17 +352,8 @@
   color: var(--nb-ink);
 }
 
-/* Buttons, before and after: each recreated on its original background. */
-.nb-btns { display: grid; gap: 16px; }
-
-.nb-btn-tile {
-  display: grid;
-  place-items: center;
-  padding: calc(40 * var(--u)) 16px;
-  background: var(--tile);
-  border: 1px solid var(--line);
-  border-radius: 12px;
-}
+/* Buttons, before and after: the pills on their own. */
+.nb-btns { display: grid; justify-items: center; gap: 24px; }
 
 .nb-btn {
   display: inline-flex;
