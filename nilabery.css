@@ -213,3 +213,12 @@
 }
 
 .nb .prev:hover .next-label svg { transform: translateX(-3px); }
+
+/* Hovering a link or button: the cursor ring fills with the studio's
+   yellow. Multiply keeps the text under it readable. */
+.nb .c-ring.is-magnet { mix-blend-mode: multiply; }
+
+.nb .c-ring.is-magnet i {
+  border-color: #FFD23F;
+  background: #FFD23F;
+}
