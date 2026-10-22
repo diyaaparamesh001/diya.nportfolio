@@ -632,6 +632,45 @@
   .nb-map-bar { width: 22px; height: 5px; }
 }
 
+/* Links to both live versions, sitting on the same columns as the
+   comparisons above. */
+.nb-links { margin-top: calc(40 * var(--u)); }
+
+.nb-links-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) calc(200 * var(--u)) minmax(0, 1fr);
+  column-gap: calc(24 * var(--u));
+  margin-top: 20px;
+}
+
+.nb-links-grid .nb-link:last-child { grid-column: 3; }
+
+.nb-link {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: max-content;
+}
+
+.nb-link-url {
+  font-family: var(--display);
+  font-size: var(--fs-lead);
+  font-weight: 600;
+  color: var(--nb-indigo);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+.nb-link:hover .nb-link-url { text-decoration-color: #FFD23F; }
+
+.nb-link-note { font-size: var(--fs-small); color: var(--nb-muted); }
+
+@media (max-width: 900px) {
+  .nb-links-grid { grid-template-columns: 1fr; row-gap: 20px; }
+  .nb-links-grid .nb-link:last-child { grid-column: auto; }
+}
+
 /* Buttons, before and after: the pills on their own. */
 .nb-btns { display: grid; justify-items: center; gap: 24px; }
 
