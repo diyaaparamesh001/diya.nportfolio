@@ -558,6 +558,57 @@
    originals stay crisp, centred in their columns. */
 .nb-ba-logo .nb-ba-shot { justify-self: center; width: min(100%, 360px); }
 
+/* Finally: the two page structures as lists of blue bars, centred on the
+   page with the arrow exactly halfway between them. */
+.nb-finally .nb-heading { max-width: none; text-align: center; }
+
+.nb-map-wrap {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  column-gap: calc(80 * var(--u));
+  margin-top: calc(40 * var(--u));
+}
+
+.nb-map-wrap > .nb-map:first-child { justify-self: end; }
+.nb-map-wrap > .nb-map:last-child { justify-self: start; }
+
+.nb-map-wrap .nb-ba-arrow { width: 150px; }
+
+.nb-map {
+  display: grid;
+  gap: 14px;
+  width: max-content;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nb-map li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  max-width: none;
+  font-size: var(--fs-body);
+  color: var(--nb-ink);
+}
+
+.nb-map-bar {
+  flex: none;
+  width: 56px;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--nb-indigo);
+}
+
+@media (max-width: 600px) {
+  .nb-map-wrap { column-gap: 12px; }
+  .nb-map-wrap .nb-ba-arrow { width: 48px; margin: 0; transform: none; }
+  .nb-map { gap: 12px; }
+  .nb-map li { gap: 8px; font-size: 13px; white-space: nowrap; }
+  .nb-map-bar { width: 22px; height: 5px; }
+}
+
 /* Buttons, before and after: the pills on their own. */
 .nb-btns { display: grid; justify-items: center; gap: 24px; }
 
