@@ -634,7 +634,7 @@
 
 /* Links to both live versions, sitting on the same columns as the
    comparisons above. */
-.nb-links { margin-top: calc(40 * var(--u)); }
+.nb-links, .nb-links > .nb-body { margin-top: 0; }
 
 .nb-links-grid {
   display: grid;
