@@ -559,8 +559,7 @@
 .nb-ba-logo .nb-ba-shot { justify-self: center; width: min(100%, 360px); }
 
 /* Finally: the two page structures as lists of blue bars, centred on the
-   page with the arrow exactly halfway between them. */
-.nb-finally .nb-heading { max-width: none; text-align: center; }
+   page with the arrow and note exactly halfway between them. */
 
 .nb-map-wrap {
   display: grid;
@@ -573,7 +572,19 @@
 .nb-map-wrap > .nb-map:first-child { justify-self: end; }
 .nb-map-wrap > .nb-map:last-child { justify-self: start; }
 
-.nb-map-wrap .nb-ba-arrow { width: 150px; }
+.nb-map-mid {
+  width: calc(240 * var(--u));
+  text-align: center;
+}
+
+.nb-map-mid .nb-ba-arrow { width: 150px; }
+
+.nb-map-mid p {
+  margin-top: 16px;
+  font-size: var(--fs-small);
+  line-height: 1.55;
+  color: var(--nb-ink);
+}
 
 .nb-map {
   display: grid;
@@ -605,8 +616,12 @@
 .nb-map-bar-hl { background: #FFD23F; }
 
 @media (max-width: 600px) {
-  .nb-map-wrap { column-gap: 12px; }
-  .nb-map-wrap .nb-ba-arrow { width: 48px; margin: 0; transform: none; }
+  /* Phones: the two lists side by side, the note centred underneath. */
+  .nb-map-wrap { grid-template-columns: 1fr 1fr; column-gap: 12px; row-gap: 24px; }
+  .nb-map-wrap > .nb-map:last-child { grid-column: 2; grid-row: 1; }
+  .nb-map-mid { grid-column: 1 / -1; grid-row: 2; width: auto; }
+  .nb-map-mid .nb-ba-arrow { display: none; }
+  .nb-map-mid p { margin-top: 0; }
   .nb-map { gap: 12px; }
   .nb-map li { gap: 8px; font-size: 13px; white-space: nowrap; }
   .nb-map-bar { width: 22px; height: 5px; }
