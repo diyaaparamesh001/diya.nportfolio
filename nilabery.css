@@ -100,7 +100,7 @@
 .nb-body b { font-weight: 600; }
 
 /* A full-width line under a comparison. */
-.nb-body.nb-goal { max-width: none; margin-top: calc(40 * var(--u)); font-size: var(--fs-body); }
+.nb-body.nb-goal { max-width: calc(760 * var(--u)); margin: calc(40 * var(--u)) auto 0; font-size: var(--fs-body); text-align: center; }
 
 /* The conclusion closes the case study, so a rule and extra space set it
    apart from the walkthrough above. */
