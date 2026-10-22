@@ -544,6 +544,7 @@
 
 /* Two screenshots stacked on one side with a small gap. */
 .nb-ba-split .nb-ba-col { display: grid; gap: 12px; }
+.nb-ba-split { align-items: center; }
 
 /* Two recordings in one shared frame so they match in height. */
 .nb-ba-videos .nb-ba-shot video { aspect-ratio: 2.45; object-fit: cover; }
