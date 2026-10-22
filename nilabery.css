@@ -99,6 +99,9 @@
 .nb-panel .nb-body { color: var(--bg); }
 .nb-body b { font-weight: 600; }
 
+/* A full-width line under a comparison. */
+.nb-body.nb-goal { max-width: none; margin-top: calc(40 * var(--u)); font-size: var(--fs-body); }
+
 /* The conclusion closes the case study, so a rule and extra space set it
    apart from the walkthrough above. */
 .nb-conclusion {
