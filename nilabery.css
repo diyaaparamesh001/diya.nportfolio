@@ -538,7 +538,7 @@
 .nb-ba-split .nb-ba-col { display: grid; gap: 12px; }
 
 /* Two recordings in one shared frame so they match in height. */
-.nb-ba-videos .nb-ba-shot video { aspect-ratio: 2.3; object-fit: cover; }
+.nb-ba-videos .nb-ba-shot video { aspect-ratio: 2.45; object-fit: cover; }
 
 /* Short images: the note runs wide under the arrow, spanning all three
    columns, so it doesn't stack up into a tall narrow block. */
