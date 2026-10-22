@@ -563,13 +563,20 @@
 
 .nb-map-wrap {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) calc(200 * var(--u)) minmax(0, 1fr);
+  /* Lists keep the standard left and right column edges; the middle
+     fills the gap between them so the note sits exactly halfway. */
+  grid-template-columns: max-content minmax(0, 1fr) calc((100% - 248 * var(--u)) / 2);
   align-items: center;
-  column-gap: calc(24 * var(--u));
   margin-top: calc(40 * var(--u));
 }
 
-.nb-map-mid { text-align: center; }
+.nb-map-mid {
+  justify-self: center;
+  width: min(100%, calc(240 * var(--u)));
+  padding: 0 16px;
+  box-sizing: content-box;
+  text-align: center;
+}
 
 .nb-map-mid .nb-ba-arrow { width: 100%; max-width: 150px; }
 
