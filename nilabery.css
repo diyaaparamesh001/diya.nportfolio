@@ -570,8 +570,12 @@
   margin-top: calc(40 * var(--u));
 }
 
+/* The left list's labels end raggedly, so its visual edge sits further
+   left than its longest label; the note shifts left by that amount to
+   look centred in the gap. */
 .nb-map-mid {
   justify-self: center;
+  transform: translateX(calc(-1.75 * var(--fs-body)));
   width: min(100%, calc(240 * var(--u)));
   padding: 0 16px;
   box-sizing: content-box;
@@ -620,7 +624,7 @@
   /* Phones: the two lists side by side, the note centred underneath. */
   .nb-map-wrap { grid-template-columns: 1fr 1fr; column-gap: 12px; row-gap: 24px; }
   .nb-map-wrap > .nb-map:last-child { grid-column: 2; grid-row: 1; }
-  .nb-map-mid { grid-column: 1 / -1; grid-row: 2; width: auto; }
+  .nb-map-mid { grid-column: 1 / -1; grid-row: 2; width: auto; transform: none; }
   .nb-map-mid .nb-ba-arrow { display: none; }
   .nb-map-mid p { margin-top: 0; }
   .nb-map { gap: 12px; }
