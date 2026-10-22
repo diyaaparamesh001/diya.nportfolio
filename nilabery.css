@@ -408,6 +408,13 @@
 
 .nb-principle:nth-child(2n) { grid-column: 3; }
 
+/* A third principle sits centred below the pair, one column wide. */
+.nb-principle.nb-principle-center {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: calc((100% - 248 * var(--u)) / 2);
+}
+
 .nb-principle .nb-card-num { color: var(--nb-indigo); }
 
 .nb-principle h3 {
@@ -429,6 +436,7 @@
 @media (max-width: 900px) {
   .nb-principles { grid-template-columns: 1fr; gap: 32px; }
   .nb-principle:nth-child(2n) { grid-column: auto; }
+  .nb-principle.nb-principle-center { grid-column: auto; justify-self: stretch; width: auto; }
 }
 
 /* Gallery: each side is two screenshots joined into one frame, lined up
